@@ -14,7 +14,7 @@ section {
 }
 .buttons {
     display: flex;
-    width: 90vw;
+    width: 70vw;
     margin: 0 auto;
 }
 input {
@@ -22,6 +22,7 @@ input {
 }
 h2 {
     display: none;
+    font-size: 1.5rem;
 }
 [class^='slide-image'] {
     display: none;
@@ -31,7 +32,7 @@ label {
     border-radius: 50%;
     width: 20px;
     height: 20px;
-    padding: 15px 20px;
+    padding: 1vh 1vw;
     margin: 0px 10px;
     cursor: pointer;
 }
@@ -40,16 +41,6 @@ label {
 }
 label:hover {
     background: #aaa;
-}
-#slide-1:checked ~ .slide-image-1{
-    display: block;
-    width: 90vw;
-    height: 90vh;
-    background-image: url(assets/1.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat; 
-    animation-duration: 3s;
-    animation-name: slidein;
 }
 #slide-1:checked  ~ .buttons .slide-1 {
     background: #aaa;
@@ -83,50 +74,64 @@ label:hover {
     animation-duration: 3s;
     animation-name: slidein;
 }
+#slide-1:checked ~ .slide-image-1{
+    display: block;
+    width: 70vw;
+    height: 90vh;
+    background-image: url(assets/1.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat; 
+    animation-duration: 3s;
+    animation-name: slidein;
+}
 .slide-image-1 {
-    width: 90vw;
+    width: 70vw;
     height: 90vh;
 }
 #slide-2:checked ~ .slide-image-2{
     display: block;
-    width: 90vw;
+    width: 70vw;
     height: 90vh;
     background-image: url(assets/2.jpg);
+    background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;  
     animation-duration: 3s;
     animation-name: slidein;
 }
 .slide-image-2 {
-    width: 90vw;
+    width: 70vw;
     height: 90vh;
 }
 #slide-3:checked ~ .slide-image-3{
     display: block;
-    width: 90vw;
+    width: 70vw;
     height: 90vh;
     background-image: url(assets/3.jpg);
+    background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
     animation-duration: 3s;
     animation-name: slidein;
 }
 .slide-image-3 {
-    width: 90vw;
+    width: 70vw;
     height: 90vh;
 }
 #slide-4:checked ~ .slide-image-4{
     display: block;
-    width: 90vw;
+    width: 70vw;
     height: 90vh;
     background-image: url(assets/4.jpg);
+    background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
     animation-duration: 3s;
     animation-name: slidein;
 }
 .slide-image-4 {
-    width: 90vw;
+    width: 70vw;
     height: 90vh;
 }
 @keyframes slidein {
@@ -140,5 +145,92 @@ label:hover {
     }
 }
 @media (max-width: 1280px) { 
-
+    #slide-1:checked ~ .slide-image-1{
+        width: 70vw;
+        height: 70vh;
+    }
+    .slide-image-1 {
+        width: 70vw;
+        height: 70vh;
+    }
+    #slide-2:checked ~ .slide-image-2{
+        width: 70vw;
+        height: 70vh;
+    }
+    .slide-image-2 {
+        width: 70vw;
+        height: 70vh;
+    }
+    #slide-3:checked ~ .slide-image-3{
+        width: 70vw;
+        height: 70vh;
+    }
+    .slide-image-3 {
+        width: 70vw;
+        height: 70vh;
+    }
+    #slide-4:checked ~ .slide-image-4{
+        width: 70vw;
+        height: 70vh;
+    }
+    .slide-image-4 {
+        width: 70vw;
+        height: 70vh;
+    }
+    .buttons {
+        display: flex;
+    }
+}
+@media (max-width: 768px) { 
+    #slide-1:checked ~ .slide-image-1{
+        width: 80vw;
+        height: 50vh;
+    }
+    .slide-image-1 {
+        width: 80vw;
+        height: 50vh;
+    }
+    #slide-2:checked ~ .slide-image-2{
+        width: 80vw;
+        height: 50vh;
+    }
+    .slide-image-2 {
+        width: 80vw;
+        height: 50vh;
+    }
+    #slide-3:checked ~ .slide-image-3{
+        width: 80vw;
+        height: 50vh;
+    }
+    .slide-image-3 {
+        width: 80vw;
+        height: 50vh;
+    }
+    #slide-4:checked ~ .slide-image-4{
+        width: 80vw;
+        height: 50vh;
+    }
+    .slide-image-4 {
+        width: 90vw;
+        height: 50vh;
+    }
+    .buttons {
+        display: flex;
+        width: 70vw;
+        align-items: center;
+        flex-direction: column;
+    }
+    h2 {
+        margin: 0 auto;
+        order: 2;
+        font-size: 1rem;
+    }
+    .labels {
+        order: 1;
+        margin-bottom: 5vh;
+        margin-left: 0;
+    }
+    label {
+        padding: 1vh 3vw;
+    }
 }
