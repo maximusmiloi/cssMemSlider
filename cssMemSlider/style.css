@@ -14,8 +14,6 @@ section {
 }
 .buttons {
     display: flex;
-    justify-content: space-around;
-    align-items: baseline;
 }
 input {
     display: none;
@@ -25,16 +23,16 @@ input {
 }
 label {
     border: 2px solid black;
-    border-radius: 60%;
+    border-radius: 50%;
     width: 20px;
     height: 20px;
-    padding: 15px 15px;
+    padding: 15px 20px;
+    margin: 0px 10px;
     cursor: pointer;
 }
-.labels {
-    margin-left: auto;
+label:hover {
+    background: #aaa;
 }
-
 #slide-1:checked ~ .slide-image-1{
     display: block;
     width: 70vw;
@@ -44,6 +42,18 @@ label {
     background-repeat: no-repeat; 
     animation-duration: 3s;
     animation-name: slidein;
+}
+#slide-1:checked  ~ .buttons .slide-1 {
+    background: #aaa;
+}
+#slide-2:checked  ~ .buttons .slide-2 {
+    background: #aaa;
+}
+#slide-3:checked  ~ .buttons .slide-3 {
+    background: #aaa;
+}
+#slide-4:checked  ~ .buttons .slide-4 {
+    background: #aaa;
 }
 .slide-image-1 {
     width: 70vw;
