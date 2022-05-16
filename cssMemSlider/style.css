@@ -16,7 +16,6 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: baseline;
-
 }
 input {
     display: none;
@@ -35,48 +34,70 @@ label {
 .labels {
     margin-left: auto;
 }
-.slide-image-1 {
-    width: 70vw;
-    height: 70vh;
-    opacity: 0;
-    transform: scale(0);
-    transition: 1s;
-}
+
 #slide-1:checked ~ .slide-image-1{
     display: block;
+    width: 70vw;
+    height: 90vh;
     background-image: url(assets/1.jpg);
     background-size: 100%;
-    background-repeat: no-repeat;
-    transform: scale(1);
-    opacity: 1;
+    background-repeat: no-repeat; 
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+.slide-image-1 {
+    width: 70vw;
+    height: 90vh;
 }
 #slide-2:checked ~ .slide-image-2{
     display: block;
-    background-image: url(assets/2.png);
+    width: 70vw;
+    height: 90vh;
+    background-image: url(assets/2.jpg);
     background-size: 100%;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;  
+    animation-duration: 3s;
+    animation-name: slidein;
 }
 .slide-image-2 {
     width: 70vw;
-    height: 70vh;
+    height: 90vh;
 }
 #slide-3:checked ~ .slide-image-3{
     display: block;
+    width: 70vw;
+    height: 90vh;
     background-image: url(assets/3.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
+    animation-duration: 3s;
+    animation-name: slidein;
 }
 .slide-image-3 {
     width: 70vw;
-    height: 70vh;
+    height: 90vh;
 }
 #slide-4:checked ~ .slide-image-4{
     display: block;
+    width: 70vw;
+    height: 90vh;
     background-image: url(assets/4.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
+    animation-duration: 3s;
+    animation-name: slidein;
 }
 .slide-image-4 {
     width: 70vw;
-    height: 70vh;
+    height: 90vh;
+}
+@keyframes slidein {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+        opacity: 1; 
+    }
 }
