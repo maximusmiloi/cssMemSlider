@@ -10,12 +10,17 @@ section {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    margin: 0 auto;
+    margin: auto auto;
 }
 .buttons {
     display: flex;
+    width: 90vw;
+    margin: 0 auto;
 }
 input {
+    display: none;
+}
+h2 {
     display: none;
 }
 [class^='slide-image'] {
@@ -30,12 +35,15 @@ label {
     margin: 0px 10px;
     cursor: pointer;
 }
+.labels {
+    margin-left: auto;
+}
 label:hover {
     background: #aaa;
 }
 #slide-1:checked ~ .slide-image-1{
     display: block;
-    width: 70vw;
+    width: 90vw;
     height: 90vh;
     background-image: url(assets/1.jpg);
     background-size: 100%;
@@ -55,13 +63,33 @@ label:hover {
 #slide-4:checked  ~ .buttons .slide-4 {
     background: #aaa;
 }
+#slide-1:checked  ~ .buttons .description-1 {
+    display: block;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+#slide-2:checked  ~ .buttons .description-2 {
+    display: block;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+#slide-3:checked  ~ .buttons .description-3 {
+    display: block;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+#slide-4:checked  ~ .buttons .description-4 {
+    display: block;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
 .slide-image-1 {
-    width: 70vw;
+    width: 90vw;
     height: 90vh;
 }
 #slide-2:checked ~ .slide-image-2{
     display: block;
-    width: 70vw;
+    width: 90vw;
     height: 90vh;
     background-image: url(assets/2.jpg);
     background-size: 100%;
@@ -70,12 +98,12 @@ label:hover {
     animation-name: slidein;
 }
 .slide-image-2 {
-    width: 70vw;
+    width: 90vw;
     height: 90vh;
 }
 #slide-3:checked ~ .slide-image-3{
     display: block;
-    width: 70vw;
+    width: 90vw;
     height: 90vh;
     background-image: url(assets/3.jpg);
     background-size: 100%;
@@ -84,12 +112,12 @@ label:hover {
     animation-name: slidein;
 }
 .slide-image-3 {
-    width: 70vw;
+    width: 90vw;
     height: 90vh;
 }
 #slide-4:checked ~ .slide-image-4{
     display: block;
-    width: 70vw;
+    width: 90vw;
     height: 90vh;
     background-image: url(assets/4.jpg);
     background-size: 100%;
@@ -98,7 +126,7 @@ label:hover {
     animation-name: slidein;
 }
 .slide-image-4 {
-    width: 70vw;
+    width: 90vw;
     height: 90vh;
 }
 @keyframes slidein {
@@ -110,4 +138,7 @@ label:hover {
         transform: scale(1);
         opacity: 1; 
     }
+}
+@media (max-width: 1280px) { 
+
 }
